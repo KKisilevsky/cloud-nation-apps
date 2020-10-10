@@ -36,6 +36,6 @@ jobs:
       - name: Build and Publish Docker Image
         shell: bash
         run: |
-            imageTag = "docker.pkg.github.com/$('${{ github.repository }}'.ToLower())/search_engine_ui:${{ github.event.inputs.tag }}"
+            imageTag = "docker.pkg.github.com/${{ github.repository }}/search_engine_ui:${{ githxub.event.inputs.tag }}"
             docker build ${{ github.workspace }}/search_engine_ui --tag $imageTag
             docker push $imageTag
