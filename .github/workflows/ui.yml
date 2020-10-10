@@ -9,12 +9,12 @@ on:
             default: 'latest'
      
     push:
-        branches: [ main, dev ]
+        branches: [ dev ]
         paths:
             - 'ui-app/**'
 
     pull_request:
-        branches: [ main, dev ]
+        branches: [ dev ]
         paths:
             - 'ui-app/**'
   
