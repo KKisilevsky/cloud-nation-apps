@@ -36,6 +36,7 @@ jobs:
       - name: Build and Publish Docker Image
         shell: bash
         run: |
-            export IMAGETAG="docker.pkg.github.com/${{ github.repository_owner }}/search_engine_ui:${{ github.event.inputs.tag }}"
+            export REPONAME=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')
+            export IMAGETAG="docker.pkg.github.com/$REPONAME/search_engine_ui:${{ github.event.inputs.tag }}"
             docker build ${{ github.workspace }}/search_engine_ui -t $IMAGETAG
             docker push $IMAGETAG
