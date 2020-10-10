@@ -1,33 +1,41 @@
-# This is a basic workflow to help you get started with Actions
+name: Build search engine ui image
 
-name: UI-CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    workflow_dispatch:
+        inputs:
+          tag:
+            description: 'Image tag'
+            required: false
+            default: 'latest'
+     
+    push:
+        branches: [ main, dev ]
+        paths:
+            - 'search_engine_ui/**'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    pull_request:
+        branches: [ main, dev ]
+        paths:
+            - 'search_engine_ui/**'
+  
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    build:
+      # The type of runner that the job will run on
+      runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      steps:
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Login to GitHub Packages Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: docker.pkg.github.com
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CI_TOKEN }}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Build and Publish Docker Image
+        shell: bash
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+            imageTag = "docker.pkg.github.com/$('${{ github.repository }}'.ToLower())/search_engine_ui:${{ github.event.inputs.tag }}"
+            docker build ${{ github.workspace }}/search_engine_ui --tag $imageTag
+            docker push $imageTag
