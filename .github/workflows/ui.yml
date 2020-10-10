@@ -7,14 +7,9 @@ on:
             description: 'Image tag'
             required: false
             default: 'latest'
-     
-    push:
-        branches: [ main, dev ]
-        paths:
-            - 'ui-app/**'
 
     pull_request:
-        branches: [ main, dev ]
+        branches: [ main ]
         paths:
             - 'ui-app/**'
   
@@ -36,6 +31,6 @@ jobs:
       - name: Build and Publish Docker Image
         shell: bash
         run: |
-            export IMAGETAG="docker.pkg.github.com/${{ github.repository }}/ui:${{ github.sha }}"
+            export IMAGETAG="docker.pkg.github.com/${{ github.repository }}/ui:release-latest"
             docker build ${{ github.workspace }}/ui-app -t $IMAGETAG
             docker push $IMAGETAG
