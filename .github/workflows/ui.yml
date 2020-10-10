@@ -11,12 +11,12 @@ on:
     push:
         branches: [ main, dev ]
         paths:
-            - 'search_engine_ui/**'
+            - 'ui_app/**'
 
     pull_request:
         branches: [ main, dev ]
         paths:
-            - 'search_engine_ui/**'
+            - 'ui_app/**'
   
 jobs:
     build:
