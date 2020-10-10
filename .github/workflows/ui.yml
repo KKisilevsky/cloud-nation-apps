@@ -38,4 +38,4 @@ jobs:
         run: |
             export IMAGETAG="docker.pkg.github.com/${{ github.repository_owner }}/search_engine_ui:${{ github.event.inputs.tag }}"
             docker build ${{ github.workspace }}/search_engine_ui -t $IMAGETAG
-            docker push docker.pkg.github.com/omnidark/search_engine_ui:latest
+            docker push docker.pkg.github.com/omnidark/search_engine_ui
