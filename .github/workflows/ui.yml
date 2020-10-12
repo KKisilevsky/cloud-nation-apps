@@ -43,9 +43,9 @@ jobs:
             python3 -m pip install --upgrade pip 
             pip install -r ${{ github.workspace }}/ui-app/requirements.txt -r ${{ github.workspace }}/ui-app/requirements-test.txt
       
-      - name: Code coverage
-        run: |   
-            coverage report --include ${{ github.workspace }}/ui-app/ui/ui.py      
+      # - name: Code coverage
+      #   run: |   
+      #       coverage report --include ${{ github.workspace }}/ui-app/ui/ui.py      
 
       - name: Run Unittests
         run: python3 -m unittest discover -s ${{ github.workspace }}/ui-app/tests/  
