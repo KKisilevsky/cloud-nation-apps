@@ -25,6 +25,14 @@ jobs:
 
       steps:
       - uses: actions/checkout@v2
+      
+      - name: Python Unittest
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.0-beta.4'
+        run: | 
+            pip install -r requirements.txt -r requirements-test.txt 
+            python -m unittest discover -s tests/
 
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
