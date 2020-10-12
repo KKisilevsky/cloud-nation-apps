@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: |
             python3 -m pip install --upgrade pip 
-            pip install -r ${{ github.workspace }}/ui-app/requirements.txt -r ${{ github.workspace }}/ui-app/requirements-test.txt
+            pip install -r ${{ github.workspace }}/crawler-app/requirements.txt -r ${{ github.workspace }}/crawler-app/requirements-test.txt
       
       - name: Code coverage
         run: | 
