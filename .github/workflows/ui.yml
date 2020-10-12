@@ -48,7 +48,9 @@ jobs:
       #       coverage report --include ${{ github.workspace }}/ui-app/ui/ui.py      
 
       - name: Run Unittests
-        run: python3 -m unittest discover -s ${{ github.workspace }}/ui-app/tests/  
+        run: |
+            cd ${{ github.workspace }}/ui-app
+            python3 -m unittest discover -s ${{ github.workspace }}/ui-app/tests/  
 
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
