@@ -47,6 +47,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+            apt-get install pylint
             python3 -m pip install --upgrade pip 
             pip install -r ${{ github.workspace }}/crawler-app/requirements.txt -r ${{ github.workspace }}/crawler-app/requirements-test.txt
       
@@ -54,8 +55,11 @@ jobs:
         run: | 
             cd ${{ github.workspace }}/crawler-app 
             coverage run -m unittest discover -s ${{ github.workspace }}/crawler-app/tests/
-            coverage report --include ${{ github.workspace }}/crawler-app/crawler/crawler.py     
+            coverage report --include ${{ github.workspace }}/crawler-app/crawler/crawler.py 
 
+      - name: Code analysis
+        run: pylint simple ${{ github.workspace }}/crawler-app/crawler
+            
       - name: Run Unittests
         run: |
             cd ${{ github.workspace }}/crawler-app
