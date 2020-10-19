@@ -7,9 +7,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io  
 spec:
   destination:
-    namespace: dev
+    namespace: prod
     server: https://kubernetes.default.svc
-  project: dev-tenant
+  project: prod-tenant
   source:
     path: search-engine/overlays/dev
     repoURL: https://github.com/cloud-nation/apps
