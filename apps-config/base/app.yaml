@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: search-engine
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io  
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: tenant
+  source:
+    path: search-engine/overlays/dev
+    repoURL: https://github.com/cloud-nation/apps
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
