@@ -12,13 +12,13 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: metadata.name
-- name: CRAWLER_SERVICE
-  objref:
-    kind: Service
-    name: crawler
-    apiVersion: v1
-  fieldref:
-    fieldpath: metadata.name    
+# - name: CRAWLER_SERVICE
+#   objref:
+#     kind: Service
+#     name: crawler
+#     apiVersion: v1
+#   fieldref:
+#     fieldpath: metadata.name    
 - name: NAMESPACE
   objref:
     kind: Service
