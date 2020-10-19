@@ -19,10 +19,10 @@ vars:
 #     apiVersion: v1
 #   fieldref:
 #     fieldpath: metadata.name    
-- name: NAMESPACE
-  objref:
-    kind: Service
-    name: ui
-    apiVersion: v1
-  fieldref:
-    fieldpath: metadata.namespace 
+# - name: NAMESPACE
+#   objref:
+#     kind: Service
+#     name: ui
+#     apiVersion: v1
+#   fieldref:
+#     fieldpath: metadata.namespace 
