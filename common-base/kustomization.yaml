@@ -4,14 +4,14 @@ resources:
 configurations:
 - varconfig.yaml
 
-vars:
-- name: UI_SERVICE
-  objref:
-    kind: Service
-    name: ui
-    apiVersion: v1
-  fieldref:
-    fieldpath: metadata.name
+# vars:
+# - name: UI_SERVICE
+#   objref:
+#     kind: Service
+#     name: ui
+#     apiVersion: v1
+#   fieldref:
+#     fieldpath: metadata.name
 # - name: CRAWLER_SERVICE
 #   objref:
 #     kind: Service
