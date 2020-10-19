@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: dev
     server: https://kubernetes.default.svc
-  project: tenant
+  project: dev-tenant
   source:
     path: search-engine/overlays/dev
     repoURL: https://github.com/cloud-nation/apps
