@@ -18,11 +18,11 @@ spec:
         image: docker.pkg.github.com/cloud-nation/apps/crawler:release-latest
         env:
             - name: MONGO
-              value: mongo-svc.dev.svc.cluster.local
+              value: develop-mongo-svc.dev.svc.cluster.local
             - name: MONGO_PORT
               value: "27017"
             - name: RMQ_HOST
-              value: rabbitmq-svc.dev.svc.cluster.local
+              value: develop-rabbitmq-svc.dev.svc.cluster.local
             - name: RMQ_QUEUE
               value: $(NAMESPACE)-q
             - name: RMQ_USERNAME

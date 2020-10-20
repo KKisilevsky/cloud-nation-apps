@@ -18,7 +18,7 @@ spec:
         image: docker.pkg.github.com/cloud-nation/apps/ui:release-latest
         env:
           - name: MONGO
-            value: mongo-svc.dev.svc.cluster.local
+            value: develop-mongo-svc.dev.svc.cluster.local
           - name: MONGO_PORT
             value: "27017"
           - name: FLASK_APP
