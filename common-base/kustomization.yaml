@@ -2,7 +2,8 @@ resources:
 - ui-deployment.yaml
 - ui-svc.yaml
 - mongo-pvc.yaml
-- mongo-svc.yaml 
+- mongo-svc.yaml
+- mongodb.yaml
 
 configurations:
 - varconfig.yaml
