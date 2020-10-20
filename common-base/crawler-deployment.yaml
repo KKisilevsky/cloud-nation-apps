@@ -20,7 +20,7 @@ spec:
             - name: MONGO
               value: mongodb
             - name: MONGO_PORT
-              value: 27017
+              value: "27017"
             - name: RMQ_HOST
               value: rabbitmq
             - name: RMQ_QUEUE
