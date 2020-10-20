@@ -4,6 +4,8 @@ resources:
 - mongo-pvc.yaml
 - mongo-svc.yaml
 - mongodb.yaml
+- rabbitmq-deployment.yaml
+- rbtmq-svc.yaml
 
 configurations:
 - varconfig.yaml
@@ -13,6 +15,13 @@ vars:
   objref:
     kind: Service
     name: ui-svc
+    apiVersion: v1
+  fieldref:
+    fieldpath: metadata.name
+- name: RABBITMQ_SERVICE
+  objref:
+    kind: Service
+    name: rabbitmq-svc
     apiVersion: v1
   fieldref:
     fieldpath: metadata.name
