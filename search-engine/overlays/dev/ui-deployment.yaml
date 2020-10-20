@@ -4,3 +4,7 @@ metadata:
   name: ui
 spec:
   replicas: 2
+  template:
+    spec:
+        imagePullSecrets:
+        - name: dockerconfigjson-github-com
