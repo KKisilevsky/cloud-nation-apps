@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: search-engine-crawler
-        image: docker.pkg.github.com/cloud-nation/apps/clawler:release-latest
+        image: docker.pkg.github.com/cloud-nation/apps/crawler:release-latest
         env:
             - name: MONGO
               value: mongodb
