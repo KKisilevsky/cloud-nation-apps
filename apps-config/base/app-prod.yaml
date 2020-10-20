@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: prod-tenant
   source:
-    path: search-engine/overlays/dev
+    path: search-engine/overlays/prod
     repoURL: https://github.com/cloud-nation/apps
     targetRevision: HEAD
   syncPolicy:
