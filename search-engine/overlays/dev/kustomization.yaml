@@ -9,9 +9,11 @@ commonLabels:
 
 patchesStrategicMerge:
 - ui-deployment.yaml
+- crawler-deployment.yaml
 resources:
 - ../../../common-base
 images:
 - name: docker.pkg.github.com/cloud-nation/apps/ui
   newName: docker.pkg.github.com/cloud-nation/apps/ui
   newTag: f253a3cda8071a2b8c01fe3306f06c53c13406fa
+#
