@@ -8,6 +8,7 @@ resources:
 - rbtmq-svc.yaml
 - ingress.yaml
 - crawler-deployment.yaml
+
 configurations:
 - varconfig.yaml
 
