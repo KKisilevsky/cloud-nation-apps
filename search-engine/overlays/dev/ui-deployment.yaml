@@ -8,8 +8,6 @@ spec:
     spec:
       containers:
       - name: search-engine-ui
-      imagePullSecrets:
-      - name: dockerconfigjson-github-com
         readinessProbe:
           httpGet:
             path: /
@@ -18,6 +16,8 @@ spec:
           successThreshold: 1
           initialDelaySeconds: 20
           periodSeconds: 10
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
   strategy:
     rollingUpdate:
       maxSurge: 25%
