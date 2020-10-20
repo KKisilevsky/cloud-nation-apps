@@ -32,4 +32,4 @@ spec:
             - name: CHECK_INTERVAL
               value: "60"
             - name: EXCLUDE_URLS
-              value: '.*github.com'
+              value: ".*github.com"
