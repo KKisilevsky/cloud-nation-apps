@@ -17,4 +17,4 @@ spec:
       - name: search-engine-ui
         image: docker.pkg.github.com/cloud-nation/apps/ui:release-latest
         ports:
-        - containerPort: 80
+        - containerPort: 8000

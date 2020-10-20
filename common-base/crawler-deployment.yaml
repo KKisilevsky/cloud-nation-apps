@@ -16,5 +16,8 @@ spec:
       containers:
       - name: search-engine-ui
         image: docker.pkg.github.com/cloud-nation/apps/ui:release-latest
-        ports:
-        - containerPort: 80
+        env:
+            - name: RABBITMQ_DEFAULT_USER 
+              value: $(NAMESPACE)-user
+            - name: RABBITMQ_DEFAULT_PASS 
+              value: $(NAMESPACE)-password
