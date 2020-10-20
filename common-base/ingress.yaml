@@ -18,4 +18,4 @@ spec:
         - path: /
           backend:
             serviceName: $(UI_SERVICE)
-            servicePort: 
+            servicePort: 8000
