@@ -1,17 +1,18 @@
 resources:
 - ui-deployment.yaml
+- ui-svc.yaml
 
 configurations:
 - varconfig.yaml
 
-# vars:
-# - name: UI_SERVICE
-#   objref:
-#     kind: Service
-#     name: ui-svc
-#     apiVersion: v1
-#   fieldref:
-#     fieldpath: metadata.name
+vars:
+- name: UI_SERVICE
+  objref:
+    kind: Service
+    name: ui-svc
+    apiVersion: v1
+  fieldref:
+    fieldpath: metadata.name
 # - name: CRAWLER_SERVICE
 #   objref:
 #     kind: Service
