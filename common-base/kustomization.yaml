@@ -2,6 +2,7 @@ resources:
 - ui-deployment.yaml
 - ui-svc.yaml
 - mongo-pvc.yaml
+- mongo-svc.yaml 
 
 configurations:
 - varconfig.yaml
@@ -14,17 +15,17 @@ vars:
     apiVersion: v1
   fieldref:
     fieldpath: metadata.name
-# - name: CRAWLER_SERVICE
-#   objref:
-#     kind: Service
-#     name: crawler
-#     apiVersion: v1
-#   fieldref:
-#     fieldpath: metadata.name    
-# - name: NAMESPACE
-#   objref:
-#     kind: Service
-#     name: ui
-#     apiVersion: v1
-#   fieldref:
-#     fieldpath: metadata.namespace 
+- name: MONGO_SERVICE
+  objref:
+    kind: Service
+    name: mongo-svc
+    apiVersion: v1
+  fieldref:
+    fieldpath: metadata.name    
+- name: NAMESPACE
+  objref:
+    kind: Service
+    name: ui-svc
+    apiVersion: v1
+  fieldref:
+    fieldpath: metadata.namespace 
