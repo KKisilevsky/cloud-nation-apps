@@ -1,13 +1,15 @@
 resources:
 - ui-deployment.yaml
 - ui-svc.yaml
-- mongo-pvc.yaml
+#- mongo-pvc.yaml
 - mongo-svc.yaml
 - mongodb.yaml
 - rabbitmq-deployment.yaml
 - rbtmq-svc.yaml
 - ingress.yaml
 - crawler-deployment.yaml
+- pv.yaml
+- pvc.yaml
 
 configurations:
 - varconfig.yaml
