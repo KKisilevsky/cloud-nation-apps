@@ -18,9 +18,9 @@ spec:
         image: docker.pkg.github.com/cloud-nation/apps/clawler:release-latest
         env:
             - name: MONGO
-              value: 27017
-            - name: MONGO_PORT
               value: mongodb
+            - name: MONGO_PORT
+              value: 27017
             - name: RMQ_HOST
               value: rabbitmq
             - name: RMQ_QUEUE
