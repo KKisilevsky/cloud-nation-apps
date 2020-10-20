@@ -3,8 +3,23 @@ kind: Deployment
 metadata:
   name: ui
 spec:
-  replicas: 2
+  replicas: 1
   template:
     spec:
-        imagePullSecrets:
-        - name: dockerconfigjson-github-com
+      containers:
+        - name: search-engine-ui
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 80
+        failureThreshold: 3
+        successThreshold: 1
+        initialDelaySeconds: 20
+        periodSeconds: 10
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate 
