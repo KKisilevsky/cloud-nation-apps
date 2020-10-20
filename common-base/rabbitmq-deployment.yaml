@@ -20,5 +20,3 @@ spec:
             - name: RABBITMQ_DEFAULT_PASS 
               value: $(NAMESPACE)-password
         image: rabbitmq:3
-        ports:
-        - containerPort: 5672
