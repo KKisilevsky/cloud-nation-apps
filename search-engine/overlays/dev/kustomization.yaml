@@ -9,7 +9,6 @@ commonLabels:
 
 patchesStrategicMerge:
 - ui-deployment.yaml
-- ui-svc.yaml
 resources:
 - ../../../common-base
 images:
