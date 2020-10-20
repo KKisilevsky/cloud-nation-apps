@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: crawer
+  name: crawler
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: crawer
+      app: crawler
   template:
     metadata:
       annotations:
       labels:
-        app: crawer
+        app: crawler
     spec:
       containers:
       - name: search-engine-crawler
