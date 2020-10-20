@@ -6,6 +6,7 @@ resources:
 - mongodb.yaml
 - rabbitmq-deployment.yaml
 - rbtmq-svc.yaml
+- ingress.yaml
 
 configurations:
 - varconfig.yaml

@@ -8,14 +8,14 @@ spec:
     spec:
       containers:
       - name: search-engine-ui
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 8000
-          failureThreshold: 3
-          successThreshold: 1
-          initialDelaySeconds: 20
-          periodSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 8000
+        #   failureThreshold: 3
+        #   successThreshold: 1
+        #   initialDelaySeconds: 20
+        #   periodSeconds: 10
       imagePullSecrets:
       - name: dockerconfigjson-github-com
   strategy:
