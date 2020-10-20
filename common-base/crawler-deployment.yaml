@@ -14,10 +14,22 @@ spec:
         app: ui
     spec:
       containers:
-      - name: search-engine-ui
-        image: docker.pkg.github.com/cloud-nation/apps/ui:release-latest
+      - name: search-engine-crawler
+        image: docker.pkg.github.com/cloud-nation/apps/clawler:release-latest
         env:
-            - name: RABBITMQ_DEFAULT_USER 
+            - name: MONGO
+              value: 27017
+            - name: MONGO_PORT
+              value: mongodb
+            - name: RMQ_HOST
+              value: rabbitmq
+            - name: RMQ_QUEUE
+              value: $(NAMESPACE)-q
+            - name: RMQ_USERNAME
               value: $(NAMESPACE)-user
-            - name: RABBITMQ_DEFAULT_PASS 
+            - name: RMQ_PASSWORD
               value: $(NAMESPACE)-password
+            - name: CHECK_INTERVAL
+              value: "60"
+            - name: EXCLUDE_URLS
+              value: '.*github.com'
