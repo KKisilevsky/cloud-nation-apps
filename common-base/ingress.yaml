@@ -17,5 +17,5 @@ spec:
       paths:
         - path: /
           backend:
-            serviceName: ui-svc
-            servicePort: http
+            serviceName: $(UI_SERVICE)
+            servicePort: 
