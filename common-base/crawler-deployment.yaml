@@ -22,7 +22,7 @@ spec:
             - name: MONGO_PORT
               value: "27017"
             - name: RMQ_HOST
-              value: develop-rabbitmq-svc.dev.svc.cluster.local
+              value: $(RABBITMQ_SERVICE)
             - name: RMQ_QUEUE
               value: $(NAMESPACE)-q
             - name: RMQ_USERNAME
