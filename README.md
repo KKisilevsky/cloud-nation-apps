@@ -6,3 +6,6 @@ Cloud Nation - GitOps project. Applications repository
 
 
 > Search engine Dev environment - [![App Status](https://argo.cloud-nation.club/api/badge?name=search-engine-dev&revision=true)](https://argo.cloud-nation.club/applications/search-engine-dev)
+### https://argo.cloud-nation.club/applications/search-engine-dev
+### https://dev-ui.cloud-nation.club/
+
