@@ -5,7 +5,7 @@ metadata:
 spec:
   secretName: dev-secret
   issuerRef:
-    name: dev-issuer
+    name: develop-dev-issuer
     kind: Issuer
   commonName: dev-ui.cloud-nation.club
   dnsNames:
