@@ -33,3 +33,4 @@ spec:
               value: "60"
             - name: EXCLUDE_URLS
               value: ".*github.com"
+# Да , я знаю про сущетсвование configmap, просто спешил 

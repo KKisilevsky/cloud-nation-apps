@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: dev-cert
+spec:
+  secretName: dev-secret
+  issuerRef:
+    name: dev-issuer
+    kind: Issuer
+  commonName: dev-ui.cloud-nation.club
+  dnsNames:
+  - dev-ui.cloud-nation.club
