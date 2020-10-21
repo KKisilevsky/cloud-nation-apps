@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
       - dev-ui.cloud-nation.club
-      secretName: develop-dev-secret
+      secretName: dev-secret
   rules:
   - host: dev-ui.cloud-nation.club
     http:
