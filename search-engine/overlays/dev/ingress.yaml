@@ -7,10 +7,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     ingress.kubernetes.io/app-root: "/"
 spec:
-  tls:
-    - hosts:
-      - dev-ui.cloud-nation.club
-      secretName: dev-secret
+#   tls:
+#     - hosts:
+#       - dev-ui.cloud-nation.club
+#       secretName: dev-secret
   rules:
   - host: dev-ui.cloud-nation.club
     http:
