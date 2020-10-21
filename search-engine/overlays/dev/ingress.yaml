@@ -18,4 +18,4 @@ spec:
         - path: /
           backend:
             serviceName: ui-svc
-            servicePort: 8000
+            servicePort: 80
