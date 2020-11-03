@@ -2,7 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ui-svc-metrics
-  metrics: dev-ui
+  labels:
+    metrics: dev-ui
 spec:
   selector:
     app: ui
