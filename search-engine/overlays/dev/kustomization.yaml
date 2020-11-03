@@ -11,6 +11,7 @@ patchesStrategicMerge:
 - ui-deployment.yaml
 - crawler-deployment.yaml
 - ingress.yaml
+- ui-svc.yaml
 resources:
 - ../../../common-base
 - dev-issuer.yaml
