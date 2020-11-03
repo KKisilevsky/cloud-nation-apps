@@ -8,7 +8,7 @@ spec:
   selector:
     app: ui
   ports:
-    - name: dev-ui-metrics
+    - name: dev-ui
       protocol: TCP
       port: 8000
       targetPort: 8000
