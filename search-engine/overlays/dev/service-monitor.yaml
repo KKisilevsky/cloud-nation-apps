@@ -7,6 +7,6 @@ metadata:
 spec:
   selector:
     matchLabels:
-      metrics: dev-ui
+      app: ui
   endpoints:
   - port: dev-ui-metrics
