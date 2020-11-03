@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
       - prod-ui.cloud-nation.club
-      secretName: dev-secret
+      secretName: prod-secret
   rules:
   - host: prod-ui.cloud-nation.club
     http:
