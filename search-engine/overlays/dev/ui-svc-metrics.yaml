@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: ui-svc-metrics
   labels:
-    metrics: dev-ui
+    app: ui
 spec:
   selector:
     app: ui
