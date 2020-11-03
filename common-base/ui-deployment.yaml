@@ -9,7 +9,6 @@ spec:
       app: ui
   template:
     metadata:
-      annotations:
       labels:
         app: ui
     spec:
