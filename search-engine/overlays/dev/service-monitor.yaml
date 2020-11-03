@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: ui-monitor
+  labels:
+    component: ui
+spec:
+  selector:
+    matchLabels:
+      metrics: dev-ui
+  endpoints:
+  - port: dev-ui-metrics
