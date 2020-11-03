@@ -1,6 +1,7 @@
 resources:
 - ui-deployment.yaml
 - ui-svc.yaml
+- ui-svc-metrics.yaml
 #- mongo-pvc.yaml
 - mongo-svc.yaml
 - mongodb.yaml
@@ -10,6 +11,7 @@ resources:
 - crawler-deployment.yaml
 - pv.yaml
 - pvc.yaml
+- service-monitor.yaml
 
 configurations:
 - varconfig.yaml
