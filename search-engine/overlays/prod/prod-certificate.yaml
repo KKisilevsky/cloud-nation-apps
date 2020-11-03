@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: prod-cert
+spec:
+  secretName: prod-secret
+  issuerRef:
+    name: production-prod-issuer
+    kind: Issuer
+  commonName: prod-ui.cloud-nation.club
+  dnsNames:
+  - prod-ui.cloud-nation.club
