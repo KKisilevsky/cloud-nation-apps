@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crawler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crawler
+  template:
+    metadata:
+      annotations:
+      labels:
+        app: crawler
+    spec:
+      containers:
+      - name: search-engine-crawler
+        image: docker.pkg.github.com/cloud-nation/apps/crawler:release-latest
+        env:
+            - name: MONGO
+              value: $(MONGO_SERVICE)
+            - name: MONGO_PORT
+              value: "27017"
+            - name: RMQ_HOST
+              value: $(RABBITMQ_SERVICE)
+            - name: RMQ_QUEUE
+              value: $(NAMESPACE)-q
+            - name: RMQ_USERNAME
+              value: $(NAMESPACE)-user
+            - name: RMQ_PASSWORD
+              value: $(NAMESPACE)-password
+            - name: CHECK_INTERVAL
+              value: "60"
+            - name: EXCLUDE_URLS
+              value: ".*github.com"
+# Да , я знаю про сущетсвование configmap, просто спешил 
