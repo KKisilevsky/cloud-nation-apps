@@ -8,6 +8,5 @@ spec:
   selector:
     matchLabels:
       app: ui
-      instance: develop
   endpoints:
-  - port: dev-ui-metrics
+  - port: dev-ui
