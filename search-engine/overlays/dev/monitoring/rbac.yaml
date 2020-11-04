@@ -48,4 +48,4 @@ spec:
         component: ui
   resources:
     requests:
-      memory: 400Mi
+      memory: 256Mi
