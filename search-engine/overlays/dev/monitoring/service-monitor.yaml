@@ -13,4 +13,5 @@ spec:
     matchNames:
     - dev
   selector:
-    app: ui
+    matchLabels:
+      app: ui
