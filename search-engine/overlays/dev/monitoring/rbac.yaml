@@ -50,6 +50,7 @@ spec:
   serviceMonitorSelector:
     matchExpressions:
         - key: app
+          operator: Exists
   resources:
     requests:
       memory: 256Mi

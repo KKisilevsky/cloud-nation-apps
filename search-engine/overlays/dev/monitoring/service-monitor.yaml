@@ -6,7 +6,7 @@ metadata:
     app: dev-ui-metrics
 spec:
   namespaceSelector:
-    mathNames:
+    matchNames:
       - develop-ui
   selector:
     matchLabels:
