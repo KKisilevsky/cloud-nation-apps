@@ -1,19 +1,16 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: ui-monitor
   labels:
-    component: ui
+    k8s-app: ui-metrics
+  name: ui-sm
+  namespace: monitoring
 spec:
+  endpoints:
+  - interval: 3s
+    port: dev-ui
   namespaceSelector:
     matchNames:
-      - dev
+    - dev
   selector:
-    matchLabels:
-      component: ui
-  targetLabels:
-    - component
-  endpoints:
-  - port: dev-ui
-    path: /metrics
-    interval: 5s
+    app: ui
