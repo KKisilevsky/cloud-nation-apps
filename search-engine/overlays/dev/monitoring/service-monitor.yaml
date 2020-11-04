@@ -10,3 +10,5 @@ spec:
       app: ui
   endpoints:
   - port: dev-ui
+    path: /metrics
+    interval: 5s

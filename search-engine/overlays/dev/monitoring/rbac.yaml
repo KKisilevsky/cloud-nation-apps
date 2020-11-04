@@ -54,3 +54,17 @@ spec:
     requests:
       memory: 256Mi
   enableAdminAPI: false
+---
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: prometheus
+spec:
+  serviceAccountName: prometheus
+  podMonitorSelector:
+    matchLabels:
+      component: ui
+  resources:
+    requests:
+      memory: 256Mi
+  enableAdminAPI: false
