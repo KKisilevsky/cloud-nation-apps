@@ -4,14 +4,14 @@ metadata:
   name: prometheus
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRole
+kind: Role
 metadata:
-  name: prometheus
+  name: prometheus-role
+  namespace: dev
 rules:
 - apiGroups: [""]
   resources:
   - nodes
-  - nodes/metrics
   - services
   - endpoints
   - pods
@@ -20,22 +20,16 @@ rules:
   resources:
   - configmaps
   verbs: ["get"]
-- apiGroups:
-  - networking.k8s.io
-  resources:
-  - ingresses
-  verbs: ["get", "list", "watch"]
-- nonResourceURLs: ["/metrics"]
-  verbs: ["get"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRoleBinding
+kind: RoleBinding
 metadata:
-  name: prometheus
+  name: prometheus-rb
+  namespace: dev
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: develop-prometheus
+  kind: Role
+  name: develop-prometheus-role
 subjects:
 - kind: ServiceAccount
   name: develop-prometheus
@@ -45,13 +39,13 @@ apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
   name: prometheus
+  labels:
+    prometheus: frontend
 spec:
   serviceAccountName: develop-prometheus
   serviceMonitorSelector:
-    matchExpressions:
-        - key: app
-          operator: Exists
+    matchLabels:
+        component: ui
   resources:
     requests:
-      memory: 256Mi
-  enableAdminAPI: false
+      memory: 400Mi

@@ -6,6 +6,7 @@ spec:
   selector:
     app: ui
   ports:
-    - protocol: TCP
+    - name: dev-ui
+      protocol: TCP
       port: 80
       targetPort: 8000
