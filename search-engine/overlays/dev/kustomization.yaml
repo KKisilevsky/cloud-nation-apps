@@ -15,9 +15,9 @@ resources:
 - ../../../common-base
 - dev-issuer.yaml
 - dev-certificate.yaml
-- service-monitor.yaml
-- ui-svc-metrics.yaml
+#- service-monitor.yaml
+#- ui-svc-metrics.yaml
 images:
 - name: docker.pkg.github.com/cloud-nation/apps/ui
   newName: docker.pkg.github.com/cloud-nation/apps/ui
-  newTag: f253a3cda8071a2b8c01fe3306f06c53c13406fa
+  newTag: 27fa376c78625176f9c2fa541fc4bff288f55648
