@@ -15,8 +15,8 @@ resources:
 - ../../../common-base
 - dev-issuer.yaml
 - dev-certificate.yaml
-- ./monitoring/service-monitor.yaml
-- ./monitoring/endpoint.yaml
+#- ./monitoring/service-monitor.yaml
+#- ./monitoring/endpoint.yaml
 # - ./monitoring/ui-svc-metrics.yaml
 # - ./monitoring/rbac.yaml
 images:
