@@ -3,8 +3,11 @@ kind: ServiceMonitor
 metadata:
   name: ui-monitor
   labels:
-    component: ui
+    app: dev-ui-metrics
 spec:
+  namespaceSelector:
+    mathNames:
+      - develop-ui
   selector:
     matchLabels:
       app: ui

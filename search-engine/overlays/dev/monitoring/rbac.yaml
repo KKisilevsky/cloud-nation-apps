@@ -48,8 +48,8 @@ metadata:
 spec:
   serviceAccountName: develop-prometheus
   serviceMonitorSelector:
-    matchLabels:
-      component: ui
+    matchExpressions:
+        - key: app
   resources:
     requests:
       memory: 256Mi
