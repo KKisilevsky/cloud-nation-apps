@@ -10,7 +10,7 @@ resources:
 - crawler-deployment.yaml
 - pv.yaml
 - pvc.yaml
-
+- service-monitor.yaml
 configurations:
 - varconfig.yaml
 

@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: ui-sm
+  labels:
+    team: frontend
+spec:
+  selector:
+    matchLabels:
+      app: ui
+  endpoints:
+  - port: dev-ui
