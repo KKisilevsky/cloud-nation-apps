@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: task-pv-claim
+  name: task-pv-claim-yc
 spec:
-  storageClassName: manual
+  storageClassName: yc-network-hdd
   accessModes:
     - ReadWriteOnce
   resources:
