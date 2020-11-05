@@ -23,4 +23,4 @@ spec:
       volumes:
       - name: mongodb-pv
         persistentVolumeClaim:
-          claimName: task-pv-claim
+          claimName: task-pv-claim-yc
