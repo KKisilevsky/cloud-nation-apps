@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: production-crawler
   labels:
-    component: crawler
+    component: prod-crawler
 spec:
   selector:
     app: crawler

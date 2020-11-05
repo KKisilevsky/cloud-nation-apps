@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: production-ui
   labels:
-    component: ui
+    component: prod-ui
 spec:
   selector:
     app: ui
