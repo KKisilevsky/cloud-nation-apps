@@ -12,10 +12,10 @@ spec:
   targetLabels:
     - component
   endpoints:
-  - port: dev-ui
+  - port: prod-ui
     interval: 5s
-  - port: dev-crawler
+  - port: prod-crawler
     interval: 5s
   namespaceSelector:
     matchNames:
-      - dev
+      - prod
