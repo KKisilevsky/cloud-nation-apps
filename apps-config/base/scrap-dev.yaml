@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: scraping-dev
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io  
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: dev-tenant
+  source:
+    path: prometheus-scraping/overlays/dev
+    repoURL: https://github.com/cloud-nation/apps
+    targetRevision: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
