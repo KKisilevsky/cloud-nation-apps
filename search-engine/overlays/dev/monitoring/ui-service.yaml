@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: develop-ui
+  labels:
+    component: ui
+spec:
+  selector:
+    app: ui
+  ports:
+  - name: dev-ui
+    protocol: TCP
+    port: 8000
+    targetPort: dev-ui

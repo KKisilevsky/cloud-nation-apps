@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: develop-ui
+  labels:
+    component: crawler
+spec:
+  selector:
+    app: crawler
+  ports:
+  - name: dev-crawler
+    protocol: TCP
+    port: 8000
+    targetPort: dev-crawler

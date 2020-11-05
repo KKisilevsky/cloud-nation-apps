@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: frontend
+  namespace: dev
+  labels:
+    component: servicemonitor
+spec:
+  selector:
+    matchExpressions:
+      - key: component
+        operator: Exists
+  targetLabels:
+    - component
+  endpoints:
+  - port: dev-ui
+    interval: 5s
+  - port: dev-crawler
+    interval: 5s
+  namespaceSelector:
+    matchNames:
+      - dev
