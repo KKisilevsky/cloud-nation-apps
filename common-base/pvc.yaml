@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: task-pv-claim-yc
 spec:
-  storageClassName: default
+  storageClassName: yc-network-hdd
   accessModes:
     - ReadWriteOnce
   resources:
