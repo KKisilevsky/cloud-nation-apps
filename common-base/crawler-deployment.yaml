@@ -33,4 +33,8 @@ spec:
               value: "60"
             - name: EXCLUDE_URLS
               value: ".*github.com"
+        ports:
+        - name: prod-crawler
+          containerPort: 8000
+          protocol: TCP
 # Да , я знаю про сущетсвование configmap, просто спешил 

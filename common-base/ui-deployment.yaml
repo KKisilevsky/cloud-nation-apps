@@ -24,4 +24,6 @@ spec:
           - name: FLASK_APP
             value: ui.py
         ports:
-        - containerPort: 8000
+        - name: prod-ui
+          containerPort: 8000
+          protocol: TCP

@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: production-crawler
+  labels:
+    component: crawler
+spec:
+  selector:
+    app: crawler
+  ports:
+  - name: prod-crawler
+    protocol: TCP
+    port: 8000
+    targetPort: prod-crawler

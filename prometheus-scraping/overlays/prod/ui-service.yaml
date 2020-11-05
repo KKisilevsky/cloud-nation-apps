@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: production-ui
+  labels:
+    component: ui
+spec:
+  selector:
+    app: ui
+  ports:
+  - name: prod-ui
+    protocol: TCP
+    port: 8000
+    targetPort: prod-ui
