@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ui-ingress
+  annotations:
+    ingress.kubernetes.io/proxy-body-size: 100M
+    kubernetes.io/ingress.class: "nginx"
+    ingress.kubernetes.io/app-root: "/"
+spec:
+  tls:
+    - hosts:
+      - dev-qa.cloud-nation.club
+      secretName: dev-secret
+  rules:
+  - host: dev-qa.cloud-nation.club
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: ui-svc
+            servicePort: 80
