@@ -1,4 +1,3 @@
 resources:
     - app-dev.yaml
     - scrap-dev.yaml
-    - app-qa.yaml
