@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: qa-cert
+spec:
+  secretName: qa-secret
+  issuerRef:
+    name: qa-qa-issuer
+    kind: Issuer
+  commonName: dev-qa.cloud-nation.club
+  dnsNames:
+  - dev-qa.cloud-nation.club
