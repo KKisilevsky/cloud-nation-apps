@@ -18,4 +18,4 @@ resources:
 images:
 - name: docker.pkg.github.com/cloud-nation/apps/ui
   newName: docker.pkg.github.com/cloud-nation/apps/ui
-  newTag: 27fa376c78625176f9c2fa541fc4bff288f55648
+  newTag: b5994f9989d8797276709075a43de72ff2146294
