@@ -18,7 +18,7 @@ resources:
 images:
 - name: docker.pkg.github.com/cloud-nation/apps/ui
   newName: docker.pkg.github.com/cloud-nation/apps/ui
-  newTag: b5994f9989d8797276709075a43de72ff2146294
+  newTag: ca08f4a271173b48e4e4b96454a8d2cd8a435bed
 - name: docker.pkg.github.com/cloud-nation/apps/crawler
   newName: docker.pkg.github.com/cloud-nation/apps/crawler
   newTag: 27fa376c78625176f9c2fa541fc4bff288f55648
